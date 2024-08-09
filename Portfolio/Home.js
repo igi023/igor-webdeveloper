@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-// JS KOD ZA HAMBURGER MENU 
+// JS code for hamburger menu 
 
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // ========================================================================================================================================
-// JS KOD ZA SLIKE U HOME SECTIONU  
+// JScode for slider images
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".sliderImages img");
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
             img.classList.remove('slide-in', 'slide-out'); // Resetuje sve klase
         });
 
-        // Prikazivanje slike u grupi
+        // showing pics in group
         images.forEach((img, index) => {
             if ((index >= cycle && index < cycle + 3) || (cycle + 3 > images.length && index < (cycle + 3) % images.length)) {
                 img.classList.remove('hidden');
@@ -98,10 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Povećava ciklus i vraća na početak ako je na kraju
+        // Highers the period and puts on the start if its in the end
         cycle = (cycle + 3) % images.length;
 
-        // Ponovo pokreni animaciju
+        // Start again the animation
         setTimeout(startAnimation, 6000); // Vreme treba da se poklapa sa trajanjem animacije
     }
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ==============================================================================================================
 
-// JS KOD ZA TEXT U HOME SEKCIJI
+// JS code for text in home section
 
   document.addEventListener("DOMContentLoaded", function() {
     let i = 0;
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-//   JS KOD ZA MY WORK
+//   JS code for my work
 document.addEventListener("DOMContentLoaded", function() {
     // Dobijanje svih projekt elemenata
     const projects = document.querySelectorAll('.project');
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   
-    // Slušanje događaja skrolovanja
+    // Listening the scroll
     window.addEventListener('scroll', checkVisibility);
     // Početna provera u slučaju da je sekcija već u vidnom polju prilikom učitavanja
     checkVisibility();
